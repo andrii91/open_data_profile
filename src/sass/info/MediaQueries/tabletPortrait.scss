@@ -3,6 +3,11 @@
 @media #{$tabletPortrait} {
     @import '../mobile';
   	& {
-     
+      .container {
+        max-width: 500px;
+      }
+      .button {
+        margin-top: 10px;
+      }
 	}
 }

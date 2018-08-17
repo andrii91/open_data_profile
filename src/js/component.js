@@ -1,6 +1,17 @@
-$(document).ready(function() { 
-  $('.head-img img').click(function(){
-    var destination = $(".program").offset().top - 0;
-    $("body,html").animate({ scrollTop: destination}, 500 );
-  });
+$(document).ready(function () {
+  $('.articles-carousel').owlCarousel({
+    loop: false,
+    margin: 30,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+         loop: true,
+        items: 1
+      },
+      800: {
+        items: 3
+      }
+    }
+  })
 });

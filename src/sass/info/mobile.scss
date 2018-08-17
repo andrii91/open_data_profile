@@ -1,3 +1,147 @@
 & {
+  .head {
+    padding: 80px 0;
+  }
+  .head-item h1 {
+    font-size: 21px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  .head-item p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .title {
+    font-size: 21px;
+    line-height: 26px;
+    &:before {
+      width: 24.2%;
+    }
+  }
+  .banner {
+    img {
+      width: 100%;
+      min-height: 100px;
+    }
+  }
+  .catalogs-item .h4-title {
+    padding: 10px 16px;
+    min-height: 84px;
+        display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .catalogs-item {
+    padding-bottom: 36px;
+    p {
+      line-height: 1;
+    }
+  }
+  .catalogs-item p span {
+    float: none;
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .catalogs-item .row {
+    padding: 0 14px;
+    .col-9 {
+      padding: 0;
+    }
+  }
+  .catalogs {
+    img {
+      max-width: 100%;
+    }
+  }
+  .articles-item .content {
+    padding-left: 15px;
+    padding-right: 15px;
+    word-wrap: break-word;
+    br {
+      display: none;
+    }
+  }
   
+  .analytics-item {
+    overflow: hidden;
+    padding: 17px 20px;
+    margin-bottom: 12px;
+    
+  }
+  .analytics-img {
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+  .scroll-btn {
+    display: inline-block;
+    color: #848586;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 26px;
+    border-radius: 2px;
+    background-color: #dfebf5;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+  }
+  .analytics .title {
+    margin-bottom: 10px;
+  }
+  .analytics-baner {
+    img {
+      width: 100%;
+      max-height: 100px;
+    }
+  }
+  .analytics {
+    padding-bottom: 40px;
+  }
+  .footer-logo {
+    font-size: 24px;
+    width: 260px;
+    margin-bottom: 24px;
+    .circle {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      &:before {
+        content: "";
+        background: url('../images/ru.png') no-repeat center;
+        width: 30px;
+        height: 17px;
+        position: absolute;
+        bottom: 0;
+        right: -10px;
+      }
+    }
+  }
+  .footer {
+    text-align: center;
+    p {
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+  .footer-menu {
+    display: block;
+    text-align: left;
+    margin-bottom: 30px;
+    li {
+      padding:  0  0 0;
+      min-width: 142px;
+      a {
+        font-size: 14px;
+        border-bottom: 0;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+
 }
