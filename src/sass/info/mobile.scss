@@ -27,7 +27,7 @@
   .catalogs-item .h4-title {
     padding: 10px 16px;
     min-height: 84px;
-        display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
@@ -40,7 +40,7 @@
       line-height: 1;
     }
   }
-  .catalogs-item p span {
+  .catalogs-item p a {
     float: none;
     display: block;
     font-size: 30px;
@@ -65,19 +65,19 @@
       display: none;
     }
   }
-  
+
   .analytics-item {
     overflow: hidden;
     padding: 17px 20px;
     margin-bottom: 12px;
-    
+
   }
   .analytics-img {
     overflow-x: auto;
     padding-bottom: 20px;
   }
   .scroll-btn {
-    display: inline-block;
+    display: block;
     color: #848586;
     font-family: Roboto;
     font-size: 12px;
@@ -87,6 +87,7 @@
     background-color: #dfebf5;
     padding: 8px 14px;
     margin-bottom: 16px;
+    max-width: 197px;
   }
   .analytics .title {
     margin-bottom: 10px;
@@ -128,20 +129,46 @@
   }
   .footer-menu {
     display: block;
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px;
     li {
-      padding:  0  0 0;
-      min-width: 142px;
+      padding: 0 10px 0;
+      margin-bottom: 10px;
       a {
         font-size: 14px;
-        border-bottom: 0;
       }
       &:before {
         display: none;
       }
     }
   }
+  .xs-block {
+    display: block;
+  }
+  .row {
+    .row {
+      margin: 0;
+      &.company-banner {
+        margin-top: 24px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .company-banner {
 
+    img {
+      margin-top: 6px;
+      min-height: 100px
+    }
+  }
+  .city-item {
+    text-align: center;
+  }
+  .city-alphabet .title {
+    margin-bottom: 20px;
+  }
+}
 
+&.catalog_tpl .head-item h1 {
+  font-size: 21px;
 }
