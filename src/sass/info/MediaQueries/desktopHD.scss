@@ -3,6 +3,8 @@
 @media #{$desktopHD} {
     @import '../desktop';
     & {
-
+      .main-banner {
+        display: block;
+      }
     }
 }
