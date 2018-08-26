@@ -65,22 +65,89 @@ $(document).ready(function () {
       } else {
         $('#more-city').hide();
       }
+    });
+    
+    $('.filter-list li a').click(function(){
+      if($(this).parents('.filter-list').hasClass('open')) {
+        $(this).parents('.filter-list').find('li').removeClass('active');
+        $(this).parents('.filter-list').find('li').addClass('hide');
+        $(this).parent().removeClass('hide').addClass('active');
+        $(this).parents('.filter-list').removeClass('open');
+      }else{
+        $(this).parents('.filter-list').find('li').removeClass('hide');
+        $(this).parents('.filter-list').find('li').show(200);
+        $(this).parents('.filter-list').addClass('open');
+      }
     })
+
   }
-  
+
   //чтоб нормально отрабатывала карусель
-  $(window).resize(function(){
-    if($('#company-carousel').hasClass('company-carousel')) {
+  $(window).resize(function () {
+    if ($('#company-carousel').hasClass('company-carousel')) {
       location.reload();
     }
   })
 
-  
-  $('#up_btn').click(function(){
-     $('html, body').animate({
-        scrollTop: 0
+
+  $('#up_btn, .up').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
     }, 1000);
     return false;
-  })
+  });
+  
+   $('.scroll').click(function (e) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+
+  });
+  
+   $('.connections-list li a').click(function (e) {
+    e.preventDefault();
+     $('.connections-list li a').removeClass('active');
+     $('.connections-tab .content').removeClass('active');
+      $(''+$(this).attr('href')).addClass('active');
+     $(this).addClass('active');
+
+  });
+
+
+  $('.gmap').each(function () {
+    var container = this;
+
+    var mapOptions = {
+      zoom: $(container).data('zoom'),
+      zoomControl: true,
+      mapTypeControl: false,
+      streetViewControl: false,
+      scrollwheel: false, //zoom on scroll
+      draggable: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(container, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({
+        'address': $(container).data('address')
+      },
+      function (results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+          new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map,
+            icon: $(container).data('marker')
+          });
+          map.setCenter(results[0].geometry.location);
+        }
+      }
+    );
+
+  });
 
 });
