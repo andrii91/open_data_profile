@@ -1556,6 +1556,7 @@ line-height: 24px;
     border: 1px solid #dfebf5;
     background-color: #f3f8fc;
     border-right: 0;
+    transition: 0.2s;
     &.active, &:hover {
       background-color: #e6562c;
       a {
