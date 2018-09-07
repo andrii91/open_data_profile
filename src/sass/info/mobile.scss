@@ -327,8 +327,26 @@
       }
     }
   }
+  .head {
+    text-align: center;
+  }
+  .search-btn {
+    margin-top: 15px;
+  }
+  .row .row.about-info {
+    text-align: center;
+    margin-bottom: 20px ;
+  }
+  .aside {
+    text-align: center;
+    padding: 15px;
+  }
+  .info-title {
+    margin-bottom: 20px;
+  }
 }
 
 &.catalog_tpl .head-item h1 {
   font-size: 21px;
 }
+

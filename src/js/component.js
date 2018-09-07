@@ -149,5 +149,10 @@ $(document).ready(function () {
     );
 
   });
+  
+  $('.about-question').click(function(){
+    $(this).toggleClass('active');
+    $(this).find('.question-content').slideToggle(200);
+  })
 
 });
