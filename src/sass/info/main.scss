@@ -1764,7 +1764,7 @@ line-height: 23px;
 
 .question-content {
   display: none;
-  margin-top: 1rem;
+  margin-top: 1rem; 
 }
 
 .box-shadow {
@@ -1777,6 +1777,9 @@ line-height: 23px;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
   margin-bottom: 35px;
   padding: 10px 15px;
+  .info-title {
+    margin-bottom: 20px;
+  }
 }
 
 .about-info {
