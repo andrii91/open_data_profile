@@ -344,6 +344,9 @@
   .info-title {
     margin-bottom: 20px;
   }
+  .kved-table td:nth-child(1) {
+    width: auto;
+  }
 }
 
 &.catalog_tpl .head-item h1 {
